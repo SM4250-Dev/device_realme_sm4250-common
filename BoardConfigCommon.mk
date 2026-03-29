@@ -35,7 +35,7 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a9
+TARGET_2ND_CPU_VARIANT := cortex-a73
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -112,7 +112,7 @@ BOARD_KERNEL_CMDLINE += \
     swiotlb=2048
 
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
+TARGET_KERNEL_CONFIG := vendor/bengal-perf_defconfig
 TARGET_KERNEL_HEADERS := kernel/realme/sm4250-common
 TARGET_KERNEL_SOURCE := kernel/realme/sm4250-common
 
@@ -121,10 +121,6 @@ TARGET_DISABLED_UBWC := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
-
-# Clang
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r383902
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE :=  67108864
